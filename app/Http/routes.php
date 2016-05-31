@@ -20,6 +20,7 @@ $app->group(['prefix' => 'api'], function () use ($app) {
     $app->get('captcha', CaptchaController::class."@getCaptcha");
 
     $app->post('captcha', CaptchaController::class."@verifyCaptcha");
+    $app->post('captcha/verify', CaptchaController::class."@verifyCaptchaToken");
 
 });
 

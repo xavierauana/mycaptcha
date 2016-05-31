@@ -56,21 +56,29 @@ class CaptchaController extends Controller
     {
         $result = false;
         $headers = [];
+        $data=[];
         if($this->isAValidRequest($request)){
             if ($request->has("captchaId") and $request->get('answer')) {
                 if ($record = Record::whereUuid($request->get('captchaId'))->whereStatus('new')->first()) {
                     $result = $record->captcha_string == $request->get('answer') ? true : false;
                     if ($result) {
+                        $record->verification_token = str_random(36);
                         $record->update(['status' => 'used']);
+                        $data["verificationToken"] = $record->verification_token;
                     }
                 }
             }
             $headers = $this->headers;
         }
-        $data = [
-            "result" => $result
-        ];
+        $data["result"] =  $result;
         return response()->json($data, 200, $headers);
+    }
+
+    public function verifyCaptchaToken(Request $request)
+    {
+            if($request->has("verificationToken")){
+                return response()->json(['success'=>true], 200, $this->headers);
+            }
     }
 
     /**
