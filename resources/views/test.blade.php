@@ -28,7 +28,7 @@
         },
         methods: {
             submit: function () {
-                var url = "http://mycaptcha.anacreation.com/api/captcha?captchaId=" + this.captchaId;
+                var url = "/api/captcha?captchaId=" + this.captchaId;
                 this.$http.post(url, {answer:this.answer}).then(function (response) {
                     console.log(response)
                 })

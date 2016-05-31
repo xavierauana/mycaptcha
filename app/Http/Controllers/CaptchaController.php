@@ -70,7 +70,7 @@ class CaptchaController extends Controller
         $data = [
             "result" => $result
         ];
-        return response()->json($data, $headers);
+        return response()->json($data, 200, $headers);
     }
 
     /**
@@ -81,7 +81,7 @@ class CaptchaController extends Controller
         $sites = Cache::remember('sites',1, function(){
             return Site::lists('domain', 'token')->toArray();
         });
-        $result = isset($sites[$request->header("ana-myCaptcha-token")]) and $sites[$request->header("ana-myCaptcha-token")] == parse_url($request->header('Origin'), PHP_URL_HOST);
+        $result = isset($sites[$request->header($this->myCaptchaTokenHeader)]) and $sites[$request->header($this->myCaptchaTokenHeader)] == parse_url($request->header('Origin'), PHP_URL_HOST);
         return $result;
     }
 
@@ -105,6 +105,6 @@ class CaptchaController extends Controller
      */
     private function isAValidRequest(Request $request)
     {
-        return !$request->hasHeader('Origin') or ($request->hasHeader('ana-myCaptcha-token') and $this->isValidToken($request));
+        return !$request->hasHeader('Origin') or ($request->hasHeader($this->myCaptchaTokenHeader) and $this->isValidToken($request));
     }
 }

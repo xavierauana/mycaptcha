@@ -24,5 +24,6 @@ $app->group(['prefix' => 'api'], function () use ($app) {
 });
 
 $app->get('/', function () use ($app) {
-    return view('welcome');
+//    return view('welcome');
+    return view('test');
 });
