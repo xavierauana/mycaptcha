@@ -17,20 +17,25 @@
 <script>
     new Vue({
         el: "body",
+        http:{
+            headers:{
+                "ana-myCaptcha-token":"D3EYVvAPcAirbhTxl8GT5PMRfxryp8lcA7g6"
+            }
+        },
         data: {
             captchaId: "",
             answer: ""
         },
         methods: {
             submit: function () {
-                var url = "/api/captcha?captchaId=" + this.captchaId;
+                var url = "http://mycaptcha.anacreation.com/api/captcha?captchaId=" + this.captchaId;
                 this.$http.post(url, {answer:this.answer}).then(function (response) {
                     console.log(response)
                 })
             },
             refresh: function () {
                 var self = this;
-                var url = "/api/captcha";
+                var url = "http://mycaptcha.anacreation.com/api/captcha";
                 this.$http.get(url).then(function (response) {
                     console.log(response);
                     var img = document.getElementById("captchaImage");
@@ -41,7 +46,7 @@
         },
         ready: function () {
             var self = this;
-            var url = "/api/captcha";
+            var url = "http://mycaptcha.anacreation.com/api/captcha";
             this.$http.get(url).then(function (response) {
                 console.log(response);
                 var img = document.createElement("img");

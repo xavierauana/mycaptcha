@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Captcha;
+use App\Record;
 use App\Site;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -43,12 +44,33 @@ class CaptchaController extends Controller
     {
         $headers = [];
         $data = null;
-        if(!$request->hasHeader('Origin') or ($request->hasHeader('ana-myCaptcha-token') and $this->isValidToken($request))){
+        if($this->isAValidRequest($request)){
                 $data = $this->createCaptchaResponseData();
                 $headers = $this->headers;
         }
 
         return response($data, 200, $headers);
+    }
+
+    public function verifyCaptcha(Request $request)
+    {
+        $result = false;
+        $headers = [];
+        if($this->isAValidRequest($request)){
+            if ($request->has("captchaId") and $request->get('answer')) {
+                if ($record = Record::whereUuid($request->get('captchaId'))->whereStatus('new')->first()) {
+                    $result = $record->captcha_string == $request->get('answer') ? true : false;
+                    if ($result) {
+                        $record->update(['status' => 'used']);
+                    }
+                }
+            }
+            $headers = $this->headers;
+        }
+        $data = [
+            "result" => $result
+        ];
+        return response()->json($data, $headers);
     }
 
     /**
@@ -75,5 +97,14 @@ class CaptchaController extends Controller
         ];
 
         return $data;
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return bool
+     */
+    private function isAValidRequest(Request $request)
+    {
+        return !$request->hasHeader('Origin') or ($request->hasHeader('ana-myCaptcha-token') and $this->isValidToken($request));
     }
 }
