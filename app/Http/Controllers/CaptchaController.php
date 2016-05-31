@@ -76,9 +76,10 @@ class CaptchaController extends Controller
 
     public function verifyCaptchaToken(Request $request)
     {
-            if($request->has("verificationToken")){
-                return response()->json(['success'=>true], 200, $this->headers);
-            }
+        if($request->has("verificationToken")){
+            return response()->json(['success'=>true], 200, $this->headers);
+        }
+        return response()->json([], 200, $this->headers);
     }
 
     /**

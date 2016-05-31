@@ -20,11 +20,11 @@ $app->group(['prefix' => 'api'], function () use ($app) {
     $app->get('captcha', CaptchaController::class."@getCaptcha");
 
     $app->post('captcha', CaptchaController::class."@verifyCaptcha");
+
     $app->post('captcha/verify', CaptchaController::class."@verifyCaptchaToken");
 
 });
 
 $app->get('/', function () use ($app) {
-//    return view('welcome');
-    return view('test');
+    return view('welcome');
 });
