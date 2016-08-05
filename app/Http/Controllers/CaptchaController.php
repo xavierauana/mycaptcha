@@ -97,9 +97,9 @@ class CaptchaController extends Controller
     /**
      * @return array
      */
-    private function createCaptchaResponseData()
+    private function createCaptchaResponseData(Request $request)
     {
-        $record = (new Captcha())->createImage();
+        $record = (new Captcha())->createImage($request->all());
         $data = [
             'imageUrl'  => $record->imageUrl,
             'captchaId' => $record->uuid

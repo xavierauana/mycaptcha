@@ -16,8 +16,6 @@ class Captcha
     private $number;
     private $width;
     private $height;
-    private $backgroundColor;
-    private $fontSize = 40;
     private $captchaImage;
     private $captchaString="";
     private $imagePath="";
@@ -29,30 +27,30 @@ class Captcha
      * @param int    $width
      * @param string $backgroundColor
      */
-    public function __construct($number=5, $height=60, $width=200, $backgroundColor="#ffffff")
+    public function __construct($number=null, $height=null, $width=null, $backgroundColor=null)
     {
-        $this->height = $height;
-        $this->number = $number;
-        $this->width = $width;
-        $this->backgroundColor = $backgroundColor;
+        $this->height = $height?? 5;
+        $this->number = $number?? 60;
+        $this->width = $width?? 200;
     }
 
-    public function createImage(): Record
+    public function createImage(array $inputs): Record
     {
-        $this->createImageCanvas();
-        $this->createCaptchaString();
-        $this->createBackgroundNoise();
+        array_key_exists("canvasBackgroundColor", $inputs)? $this->createImageCanvas($inputs["canvasBackgroundColor"]):$this->createImageCanvas();
+        $this->createCaptchaString($inputs);
+        array_key_exists("noiseColor", $inputs)? $this->createBackgroundNoise($inputs["noiseColor"]):$this->createBackgroundNoise();
         $this->saveCaptchaImage();
         $record = $this->createDBRecord();
 
         return $record;
     }
     
-    private function createCaptchaString()
+    private function createCaptchaString(array $inputs)
     {
+        $fontSize = array_key_exists("fontSize",$inputs)? $inputs["fontSize"] : ImageSetting::DefaultFontSize;
         $posXConstant = 15;
         $posYConstant = 10;
-        $topMargin = ($this->height / 2) + ($this->fontSize / 2) - $posYConstant;
+        $topMargin = ($this->height / 2) + ($fontSize / 2) - $posYConstant;
         $padding = 20;
         $wordSpacing = ($this->width - $padding * 2 + $posXConstant) / $this->number;
         for ($i = 0; $i < $this->number; $i++) {
@@ -63,12 +61,16 @@ class Captcha
             if ($i > 0) {
                 $posX -= $posXConstant;
             }
-            $this->captchaImage->text($char, $posX, $topMargin, function ($font) use ($char) {
-                $fontColor = is_numeric($char) ? "#bebebe" : '#2f4f4f';
+            $this->captchaImage->text($char, $posX, $topMargin, function ($font) use ($char, $fontSize, $inputs) {
+                $numericFontColor = array_key_exists('numericFontColor', $inputs)? $inputs["numericFontColor"] : ImageSetting::NumericFontColor;
+                $alphabetFontColor = array_key_exists('alphabetFontColor', $inputs)? $inputs["alphabetFontColor"] : ImageSetting::AlphabetFontColor;
+                $rotationAngle = array_key_exists('rotationAngle', $inputs)? intval($inputs["rotationAngle"]): ImageSetting::TextRotationAngle;
+
+                $fontColor = is_numeric($char) ? $numericFontColor : $alphabetFontColor;
                 $font->file(public_path() . '/fonts/AdventPro-Regular.ttf');
-                $font->size($this->fontSize);
+                $font->size($fontSize);
                 $font->color($fontColor);
-                $font->angle(rand(-60, 60));
+                $font->angle(rand(-$rotationAngle, $rotationAngle));
             });
         }
     }
@@ -81,24 +83,26 @@ class Captcha
         $this->imagePath = str_replace(public_path(), "", $this->imagePath);
     }
 
-    private function createBackgroundNoise()
+    private function createBackgroundNoise($color=null)
     {
+        $color = $color?? ImageSetting::BackgroundNoiseDefaultColor;
         $this->captchaImage->pixelate(1);
         for ($i = 0; $i < 10; $i++) {
             $x1 = rand(0, $this->width);
             $y1 = 0;
             $x2 = rand(0, $this->width);
             $y2 = $this->height;
-            $this->captchaImage->line($x1, $y1, $x2, $y2, function ($draw) {
-                $draw->color('#0000ff');
+            $this->captchaImage->line($x1, $y1, $x2, $y2, function ($draw)use($color) {
+                $draw->color($color);
             });
         }
     }
 
-    private function createImageCanvas()
+    private function createImageCanvas($canvasBackgroundColor=null)
     {
+        $canvasBackgroundColor = $canvasBackgroundColor?? ImageSetting::CanvasBackgroundDefaultColor;
         $imageManager = new ImageManager();
-        $this->captchaImage = $imageManager->canvas($this->width, $this->height, $this->backgroundColor);
+        $this->captchaImage = $imageManager->canvas($this->width, $this->height, $canvasBackgroundColor);
     }
 
     private function createDBRecord()
