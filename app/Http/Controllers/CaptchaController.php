@@ -45,7 +45,7 @@ class CaptchaController extends Controller
         $headers = [];
         $data = null;
         if($this->isAValidRequest($request)){
-                $data = $this->createCaptchaResponseData();
+                $data = $this->createCaptchaResponseData($request);
                 $headers = $this->headers;
         }
 
