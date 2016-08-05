@@ -85,7 +85,7 @@ class Captcha
 
     private function createBackgroundNoise($color=null)
     {
-        $color = $color?? ImageSetting::BackgroundNoiseDefaultColor;
+        $color = $color ?? ImageSetting::BackgroundNoiseDefaultColor;
         $this->captchaImage->pixelate(1);
         for ($i = 0; $i < 10; $i++) {
             $x1 = rand(0, $this->width);
