@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf5bf33-7860-4a2b-befc-d50dc6a0e2b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Captcha.php" afterPath="$PROJECT_DIR$/app/Captcha.php" />
     </list>
     <ignored path="myCaptcha.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,17 +25,17 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="Captcha.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Captcha.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Captcha.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="805">
-                  <caret line="40" column="36" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="36" />
+                <state relative-caret-position="598">
+                  <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ImageSetting.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ImageSetting.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/ImageSetting.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="230">
@@ -82,7 +82,7 @@
           <file leaf-file-name="CaptchaController.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="819">
+                <state relative-caret-position="1403">
                   <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
                   <folding />
                 </state>
@@ -132,8 +132,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_05_31_094317_add_token_column_to_captcha_table.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/ImageSetting.php" />
-        <option value="$PROJECT_DIR$/app/Captcha.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
+        <option value="$PROJECT_DIR$/app/Captcha.php" />
       </list>
     </option>
   </component>
@@ -296,12 +296,12 @@
       <updated>1464585360813</updated>
       <workItem from="1464585362145" duration="32379000" />
       <workItem from="1464762587807" duration="80000" />
-      <workItem from="1470374916880" duration="2449000" />
+      <workItem from="1470374916880" duration="2538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34908000" />
+    <option name="totallyTimeSpent" value="34997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-545" y="-1296" width="2304" height="1296" extended-state="0" />
@@ -575,14 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Captcha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ImageSetting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -601,8 +593,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
+        <state relative-caret-position="1403">
           <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Captcha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding />
         </state>
       </provider>

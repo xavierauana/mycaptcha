@@ -29,7 +29,7 @@ class Captcha
      */
     public function __construct($number=null, $height=null, $width=null, $backgroundColor=null)
     {
-        $this->height = $height?? 5;
+        $this->height = $height?? 50;
         $this->number = $number?? 60;
         $this->width = $width?? 200;
     }
