@@ -38,17 +38,17 @@
       <file leaf-file-name="CaptchaController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="71" column="44" lean-forward="false" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
+            <state relative-caret-position="315">
+              <caret line="66" column="52" lean-forward="false" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
               <folding>
                 <element signature="e#41#57#0#PHP" expanded="true" />
                 <element signature="e#357#842#0#PHP" expanded="true" />
                 <element signature="e#849#1226#0#PHP" expanded="true" />
                 <element signature="e#948#1033#1#PHP" expanded="true" />
                 <element signature="e#1232#1538#0#PHP" expanded="true" />
-                <element signature="e#3198#3608#0#PHP" expanded="true" />
-                <element signature="e#3651#3923#0#PHP" expanded="true" />
-                <element signature="e#4013#4206#0#PHP" expanded="true" />
+                <element signature="e#3204#3614#0#PHP" expanded="true" />
+                <element signature="e#3657#3929#0#PHP" expanded="true" />
+                <element signature="e#4019#4212#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -316,12 +316,12 @@
       <workItem from="1480568881627" duration="367000" />
       <workItem from="1484222865341" duration="377000" />
       <workItem from="1489476139192" duration="2444000" />
-      <workItem from="1489524135059" duration="1503000" />
+      <workItem from="1489524135059" duration="1644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40808000" />
+    <option name="totallyTimeSpent" value="40949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -643,17 +643,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="71" column="44" lean-forward="false" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
+        <state relative-caret-position="315">
+          <caret line="66" column="52" lean-forward="false" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
           <folding>
             <element signature="e#41#57#0#PHP" expanded="true" />
             <element signature="e#357#842#0#PHP" expanded="true" />
             <element signature="e#849#1226#0#PHP" expanded="true" />
             <element signature="e#948#1033#1#PHP" expanded="true" />
             <element signature="e#1232#1538#0#PHP" expanded="true" />
-            <element signature="e#3198#3608#0#PHP" expanded="true" />
-            <element signature="e#3651#3923#0#PHP" expanded="true" />
-            <element signature="e#4013#4206#0#PHP" expanded="true" />
+            <element signature="e#3204#3614#0#PHP" expanded="true" />
+            <element signature="e#3657#3929#0#PHP" expanded="true" />
+            <element signature="e#4019#4212#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

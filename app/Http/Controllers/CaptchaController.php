@@ -64,7 +64,7 @@ class CaptchaController extends Controller
 
             if (is_numeric($key) and count_chars($value) > 0) {
 
-                $newArray = json_decode($value);
+                $newArray = json_decode($value, true);
                 $key = array_keys($newArray)[0];
                 $value = $newArray[$key];
             }
