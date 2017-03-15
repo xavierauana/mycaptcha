@@ -20,53 +20,51 @@ class CaptchaController extends Controller
      * CaptchaController constructor.
      * @param array $headers
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->myCaptchaTokenHeader = "ana-myCaptcha-token";
         $this->headers = [
             'Access-Control-Allow-Origin'      => '*',
             'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE',
             'Access-Control-Allow-Credentials' => 'true',
-            'Access-Control-Allow-Headers'     => 'X-Requested-With, Content-Type, X-Auth-Token, Origin, Authorization,'.$this->myCaptchaTokenHeader
+            'Access-Control-Allow-Headers'     => 'X-Requested-With, Content-Type, X-Auth-Token, Origin, Authorization,' . $this->myCaptchaTokenHeader
         ];
     }
 
 
-    public function getRequestHeaders(Request $request)
-    {
-        $sites = Cache::remember('sites',1, function(){
+    public function getRequestHeaders(Request $request) {
+        $sites = Cache::remember('sites', 1, function () {
             return Site::lists('domain', 'token')->toArray();
         });
-        $headers = in_array(parse_url($request->header('Origin'), PHP_URL_HOST), array_values($sites))? $this->headers:[];
+        $headers = in_array(parse_url($request->header('Origin'), PHP_URL_HOST),
+            array_values($sites)) ? $this->headers : [];
+
         return response(null, 200, $headers);
     }
 
-    public function getCaptcha(Request $request)
-    {
+    public function getCaptcha(Request $request) {
         $headers = [];
         $data = null;
-        if($this->isAValidRequest($request)){
-                $data = $this->createCaptchaResponseData($request);
-                $headers = $this->headers;
+        if ($this->isAValidRequest($request)) {
+            $data = $this->createCaptchaResponseData($request);
+            $headers = $this->headers;
         }
 
         return response($data, 200, $headers);
     }
 
-    public function verifyCaptcha(Request $request)
-    {
+    public function verifyCaptcha(Request $request) {
         $result = false;
         $headers = [];
-        $data=[];
+        $data = [];
 
         $temp = $request->all();
 
-        foreach ($temp as $key=>$value){
-            Log::info("key is: ", $key);
-            Log::info("value is: ", $value);
+        foreach ($temp as $key => $value) {
+            Log::info("key is: {$key}");
+            Log::info("value is: {$value}");
         }
 
-        if($this->isAValidRequest($request)){
+        if ($this->isAValidRequest($request)) {
             Log::info("is valid request");
             if ($request->has("captchaId") and $request->get('answer')) {
                 if ($record = Record::whereUuid($request->get('captchaId'))->whereStatus('new')->first()) {
@@ -80,35 +78,36 @@ class CaptchaController extends Controller
             }
             $headers = $this->headers;
         }
-        $data["result"] =  $result;
+        $data["result"] = $result;
+
         return response()->json($data, 200, $headers);
     }
 
-    public function verifyCaptchaToken(Request $request)
-    {
-        if($request->has("verificationToken")){
-            return response()->json(['success'=>true], 200, $this->headers);
+    public function verifyCaptchaToken(Request $request) {
+        if ($request->has("verificationToken")) {
+            return response()->json(['success' => true], 200, $this->headers);
         }
-        return response()->json(['fail'=>true], 200, $this->headers);
+
+        return response()->json(['fail' => true], 200, $this->headers);
     }
 
     /**
      * @return bool
      */
-    private function isValidToken($request)
-    {
-        $sites = Cache::remember('sites',1, function(){
+    private function isValidToken($request) {
+        $sites = Cache::remember('sites', 1, function () {
             return Site::lists('domain', 'token')->toArray();
         });
-        $result = isset($sites[$request->header($this->myCaptchaTokenHeader)]) and $sites[$request->header($this->myCaptchaTokenHeader)] == parse_url($request->header('Origin'), PHP_URL_HOST);
+        $result = isset($sites[$request->header($this->myCaptchaTokenHeader)]) and $sites[$request->header($this->myCaptchaTokenHeader)] == parse_url($request->header('Origin'),
+            PHP_URL_HOST);
+
         return $result;
     }
 
     /**
      * @return array
      */
-    private function createCaptchaResponseData(Request $request)
-    {
+    private function createCaptchaResponseData(Request $request) {
         $record = (new Captcha())->createImage($request->all());
         $data = [
             'imageUrl'  => $record->imageUrl,
@@ -122,8 +121,7 @@ class CaptchaController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return bool
      */
-    private function isAValidRequest(Request $request)
-    {
+    private function isAValidRequest(Request $request) {
         return !$request->hasHeader('Origin') or ($request->hasHeader($this->myCaptchaTokenHeader) and $this->isValidToken($request));
     }
 }
