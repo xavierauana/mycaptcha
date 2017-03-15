@@ -59,14 +59,17 @@ class CaptchaController extends Controller
 
         $temp = $request->all();
 
+        $answer = null;
+
         foreach ($temp as $key => $value) {
-
-
             if (is_numeric($key) and count_chars($value) > 0) {
 
                 $newArray = json_decode($value, true);
                 $key = array_keys($newArray)[0];
-                $value = $newArray[$key];
+
+                if ($key == 'answer') {
+                    $answer = $newArray[$key];
+                }
             }
             Log::info("key is: {$key}");
             Log::info("value is: {$value}");
@@ -74,9 +77,9 @@ class CaptchaController extends Controller
 
         if ($this->isAValidRequest($request)) {
             Log::info("is valid request");
-            if ($request->has("captchaId") and $request->get('answer')) {
+            if ($request->has("captchaId") and $answer) {
                 if ($record = Record::whereUuid($request->get('captchaId'))->whereStatus('new')->first()) {
-                    $result = $record->captcha_string == $request->get('answer') ? true : false;
+                    $result = $record->captcha_string == $answer ? true : false;
                     if ($result) {
                         $record->verification_token = str_random(36);
                         $record->update(['status' => 'used']);
