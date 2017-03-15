@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf5bf33-7860-4a2b-befc-d50dc6a0e2b1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/myCaptcha.iml" afterPath="$PROJECT_DIR$/.idea/myCaptcha.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
     </list>
     <ignored path="myCaptcha.iws" />
@@ -41,17 +38,17 @@
       <file leaf-file-name="CaptchaController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+            <state relative-caret-position="252">
+              <caret line="65" column="44" lean-forward="true" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
               <folding>
                 <element signature="e#41#57#0#PHP" expanded="true" />
                 <element signature="e#357#844#0#PHP" expanded="true" />
                 <element signature="e#851#1213#0#PHP" expanded="true" />
                 <element signature="e#953#1036#1#PHP" expanded="true" />
                 <element signature="e#1219#1535#0#PHP" expanded="true" />
-                <element signature="e#2831#3229#0#PHP" expanded="true" />
-                <element signature="e#3272#3548#0#PHP" expanded="true" />
-                <element signature="e#3638#3835#0#PHP" expanded="true" />
+                <element signature="e#2968#3366#0#PHP" expanded="true" />
+                <element signature="e#3409#3685#0#PHP" expanded="true" />
+                <element signature="e#3775#3972#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -319,12 +316,12 @@
       <workItem from="1480568881627" duration="367000" />
       <workItem from="1484222865341" duration="377000" />
       <workItem from="1489476139192" duration="2444000" />
-      <workItem from="1489524135059" duration="433000" />
+      <workItem from="1489524135059" duration="692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39738000" />
+    <option name="totallyTimeSpent" value="39997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -646,17 +643,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+        <state relative-caret-position="252">
+          <caret line="65" column="44" lean-forward="true" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
           <folding>
             <element signature="e#41#57#0#PHP" expanded="true" />
             <element signature="e#357#844#0#PHP" expanded="true" />
             <element signature="e#851#1213#0#PHP" expanded="true" />
             <element signature="e#953#1036#1#PHP" expanded="true" />
             <element signature="e#1219#1535#0#PHP" expanded="true" />
-            <element signature="e#2831#3229#0#PHP" expanded="true" />
-            <element signature="e#3272#3548#0#PHP" expanded="true" />
-            <element signature="e#3638#3835#0#PHP" expanded="true" />
+            <element signature="e#2968#3366#0#PHP" expanded="true" />
+            <element signature="e#3409#3685#0#PHP" expanded="true" />
+            <element signature="e#3775#3972#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

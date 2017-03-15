@@ -58,7 +58,14 @@ class CaptchaController extends Controller
         $result = false;
         $headers = [];
         $data=[];
-        Log::info($request->all());
+
+        $temp = $request->all();
+
+        foreach ($temp as $key=>$value){
+            Log::info("key is: ", $key);
+            Log::info("value is: ", $value);
+        }
+
         if($this->isAValidRequest($request)){
             Log::info("is valid request");
             if ($request->has("captchaId") and $request->get('answer')) {
