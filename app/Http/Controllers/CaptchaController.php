@@ -60,6 +60,14 @@ class CaptchaController extends Controller
         $temp = $request->all();
 
         foreach ($temp as $key => $value) {
+
+
+            if (is_numeric($key) and count_chars($value) > 0) {
+
+                $newArray = json_decode($value);
+                $key = array_keys($newArray)[0];
+                $value = $newArray[$key];
+            }
             Log::info("key is: {$key}");
             Log::info("value is: {$value}");
         }
