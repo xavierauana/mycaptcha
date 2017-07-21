@@ -8,6 +8,7 @@ use App\Record;
 use App\Site;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Log;
 
 class CaptchaController extends Controller
 {
@@ -115,6 +116,7 @@ class CaptchaController extends Controller
      * @return array
      */
     private function createCaptchaResponseData(Request $request) {
+        Log::info("going to create captcha");
         $record = (new Captcha())->createImage($request->all());
         $data = [
             'imageUrl'  => $record->imageUrl,
