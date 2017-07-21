@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf5bf33-7860-4a2b-befc-d50dc6a0e2b1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
     </list>
     <ignored path="myCaptcha.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaptchaController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CaptchaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="118" column="45" lean-forward="false" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
+            <state relative-caret-position="321">
+              <caret line="116" column="7" lean-forward="true" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
               <folding>
                 <element signature="e#41#57#0#PHP" expanded="true" />
                 <element signature="e#273#352#0#PHP" expanded="false" />
@@ -59,9 +58,20 @@
                 <element signature="e#3130#3540#0#PHP" expanded="true" />
                 <element signature="e#3217#3302#1#PHP" expanded="true" />
                 <element signature="e#3546#3578#0#PHP" expanded="false" />
+                <element signature="e#3583#3901#0#PHP" expanded="true" />
                 <element signature="e#3907#3986#0#PHP" expanded="false" />
                 <element signature="e#3991#4184#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,6 +126,7 @@
         <option value="$PROJECT_DIR$/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/app/Captcha.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -342,12 +353,12 @@
       <workItem from="1484222865341" duration="377000" />
       <workItem from="1489476139192" duration="2444000" />
       <workItem from="1489524135059" duration="2318000" />
-      <workItem from="1500607009706" duration="4321000" />
+      <workItem from="1500607009706" duration="4396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45944000" />
+    <option name="totallyTimeSpent" value="46019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -419,7 +430,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/captcha/C6UN2um3nYIXfs4a.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/pmtiiYXmG6xS1H9d.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/GViDdJum4hcFbyTY.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/xnGlLm8JBK95wrL1.gif" />
@@ -720,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="118" column="45" lean-forward="false" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
+        <state relative-caret-position="321">
+          <caret line="116" column="7" lean-forward="true" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
           <folding>
             <element signature="e#41#57#0#PHP" expanded="true" />
             <element signature="e#273#352#0#PHP" expanded="false" />
@@ -739,9 +749,18 @@
             <element signature="e#3130#3540#0#PHP" expanded="true" />
             <element signature="e#3217#3302#1#PHP" expanded="true" />
             <element signature="e#3546#3578#0#PHP" expanded="false" />
+            <element signature="e#3583#3901#0#PHP" expanded="true" />
             <element signature="e#3907#3986#0#PHP" expanded="false" />
             <element signature="e#3991#4184#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
