@@ -13,17 +13,19 @@
 
 use App\Http\Controllers\CaptchaController;
 
-dd("done");
 
 $app->group(['prefix' => 'api'], function () use ($app) {
 
-    $app->options('captcha', ['uses'=>CaptchaController::class."@getRequestHeaders"]);
+    $app->options('captcha', ['uses' => CaptchaController::class . "@getRequestHeaders"]);
 
-    $app->get('captcha', CaptchaController::class."@getCaptcha");
+    //    $app->get('captcha', CaptchaController::class."@getCaptcha");
+    $app->get('captcha', function () {
+        dd("done");
+    });
 
-    $app->post('captcha', CaptchaController::class."@verifyCaptcha");
+    $app->post('captcha', CaptchaController::class . "@verifyCaptcha");
 
-    $app->post('captcha/verify', CaptchaController::class."@verifyCaptchaToken");
+    $app->post('captcha/verify', CaptchaController::class . "@verifyCaptchaToken");
 
 });
 
