@@ -22,8 +22,10 @@ class Captcha
     private $font_file = "AlpacaScarlett.ttf";
     private $skip_chars = [
         'l',
+        "I",
         '1',
         "O",
+        "o",
         "0",
         "9",
         "g",
@@ -65,10 +67,10 @@ class Captcha
 
             do {
                 $char = str_random(1);
+                Log::info($char);
+                Log::info("there is skip chars, ", $this->skip_chars);
             } while (in_array($char, $this->skip_chars));
 
-            Log::info($char);
-            Log::info("there is skip chars, ", $this->skip_chars);
 
             $this->captchaString .= $char;
             $posX = ($i + 1) * $wordSpacing;

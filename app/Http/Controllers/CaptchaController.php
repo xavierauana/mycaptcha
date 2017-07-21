@@ -8,7 +8,6 @@ use App\Record;
 use App\Site;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Log;
 
 class CaptchaController extends Controller
 {
@@ -71,12 +70,9 @@ class CaptchaController extends Controller
                     $answer = $newArray[$key];
                 }
             }
-            Log::info("key is: {$key}");
-            Log::info("value is: {$value}");
         }
 
         if ($this->isAValidRequest($request)) {
-            Log::info("is valid request");
             if ($request->has("captchaId") and $answer) {
                 if ($record = Record::whereUuid($request->get('captchaId'))->whereStatus('new')->first()) {
                     $result = $record->captcha_string == $answer ? true : false;
