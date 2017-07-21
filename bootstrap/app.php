@@ -10,16 +10,7 @@ try {
 
 
 
-/*
-|--------------------------------------------------------------------------
-| Create Custom Logger
-|--------------------------------------------------------------------------
-|
-|
-*/
-$app->configureMonologUsing(function($monolog) {
-    return $monolog;
-});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -108,6 +99,17 @@ $app->singleton(
 
 $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
     require __DIR__.'/../app/Http/routes.php';
+});
+
+/*
+|--------------------------------------------------------------------------
+| Create Custom Logger
+|--------------------------------------------------------------------------
+|
+|
+*/
+$app->configureMonologUsing(function($monolog) {
+    return $monolog;
 });
 
 return $app;
