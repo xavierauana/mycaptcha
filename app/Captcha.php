@@ -18,7 +18,7 @@ class Captcha
     private $captchaImage;
     private $captchaString = "";
     private $imagePath = "";
-    private $font_file = "Alpaca_Scarlett.ttf";
+    private $font_file = "AlpacaScarlett.ttf";
 
     /**
      * Captcha constructor.
