@@ -8,6 +8,7 @@
 namespace App;
 
 
+use Illuminate\Support\Facades\Log;
 use Intervention\Image\ImageManager;
 
 class Captcha
@@ -20,7 +21,13 @@ class Captcha
     private $imagePath = "";
     private $font_file = "AlpacaScarlett.ttf";
     private $skip_chars = [
-      'l','1',"O","0","9","g","q"
+        'l',
+        '1',
+        "O",
+        "0",
+        "9",
+        "g",
+        "q"
     ];
 
     /**
@@ -56,9 +63,13 @@ class Captcha
         $padding = 20;
         $wordSpacing = ($this->width - $padding * 2 + $posXConstant) / $this->number;
         for ($i = 0; $i < $this->number; $i++) {
-            do{
+
+            do {
                 $char = str_random(1);
-            }while(in_array($char, $this->skip_chars));
+            } while (in_array($char, $this->skip_chars));
+
+            Log::info($char);
+
             $this->captchaString .= $char;
             $posX = ($i + 1) * $wordSpacing;
 
