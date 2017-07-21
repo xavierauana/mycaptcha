@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf5bf33-7860-4a2b-befc-d50dc6a0e2b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/app.php" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
     </list>
     <ignored path="myCaptcha.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
+            <state relative-caret-position="2346">
               <caret line="112" column="3" lean-forward="false" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
               <folding>
                 <element signature="e#2909#2975#1#PHP" expanded="true" />
@@ -48,30 +50,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CaptchaController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CaptchaController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="257">
+              <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
               <folding>
                 <element signature="e#41#57#0#PHP" expanded="true" />
                 <element signature="e#264#343#0#PHP" expanded="false" />
                 <element signature="e#348#833#0#PHP" expanded="true" />
                 <element signature="e#911#1025#0#PHP" expanded="false" />
                 <element signature="e#1046#1141#0#PHP" expanded="false" />
-                <element signature="e#1223#1571#0#PHP" expanded="true" />
-                <element signature="e#1985#2073#0#PHP" expanded="false" />
-                <element signature="e#2159#2697#0#PHP" expanded="false" />
-                <element signature="e#2221#2683#0#PHP" expanded="false" />
-                <element signature="e#2414#2665#0#PHP" expanded="false" />
-                <element signature="e#2912#3042#0#PHP" expanded="false" />
-                <element signature="e#3127#3158#0#PHP" expanded="false" />
-                <element signature="e#3163#3573#0#PHP" expanded="true" />
-                <element signature="e#3250#3335#1#PHP" expanded="true" />
-                <element signature="e#3579#3611#0#PHP" expanded="false" />
-                <element signature="e#3616#3888#0#PHP" expanded="true" />
-                <element signature="e#3894#3973#0#PHP" expanded="false" />
-                <element signature="e#3978#4171#0#PHP" expanded="true" />
+                <element signature="e#1624#2890#0#PHP" expanded="true" />
+                <element signature="e#2032#2120#0#PHP" expanded="false" />
+                <element signature="e#2206#2744#0#PHP" expanded="false" />
+                <element signature="e#2268#2730#0#PHP" expanded="false" />
+                <element signature="e#2461#2712#0#PHP" expanded="false" />
+                <element signature="e#2959#3089#0#PHP" expanded="false" />
+                <element signature="e#3174#3205#0#PHP" expanded="false" />
+                <element signature="e#3210#3620#0#PHP" expanded="true" />
+                <element signature="e#3297#3382#1#PHP" expanded="true" />
+                <element signature="e#3626#3658#0#PHP" expanded="false" />
+                <element signature="e#3663#3935#0#PHP" expanded="true" />
+                <element signature="e#3941#4020#0#PHP" expanded="false" />
+                <element signature="e#4025#4218#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,9 +127,9 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/ImageSetting.php" />
         <option value="$PROJECT_DIR$/app/Captcha.php" />
+        <option value="$PROJECT_DIR$/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
-        <option value="$PROJECT_DIR$/bootstrap/app.php" />
       </list>
     </option>
   </component>
@@ -185,57 +187,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myCaptcha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myCaptcha" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myCaptcha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myCaptcha" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myCaptcha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myCaptcha" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -368,12 +320,12 @@
       <workItem from="1484222865341" duration="377000" />
       <workItem from="1489476139192" duration="2444000" />
       <workItem from="1489524135059" duration="2318000" />
-      <workItem from="1500607009706" duration="5338000" />
+      <workItem from="1500607009706" duration="5598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46961000" />
+    <option name="totallyTimeSpent" value="47221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -445,7 +397,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/captcha/GViDdJum4hcFbyTY.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/xnGlLm8JBK95wrL1.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/gw3bRXyPBB3sRoZz.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/iLvDRKAPoeXPmLSv.gif" />
@@ -717,23 +668,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -751,40 +686,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="112" column="3" lean-forward="false" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
+          <folding>
+            <element signature="e#2909#2975#1#PHP" expanded="true" />
+            <element signature="e#3192#3235#2#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="257">
+          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
             <element signature="e#41#57#0#PHP" expanded="true" />
             <element signature="e#264#343#0#PHP" expanded="false" />
             <element signature="e#348#833#0#PHP" expanded="true" />
             <element signature="e#911#1025#0#PHP" expanded="false" />
             <element signature="e#1046#1141#0#PHP" expanded="false" />
-            <element signature="e#1223#1571#0#PHP" expanded="true" />
-            <element signature="e#1985#2073#0#PHP" expanded="false" />
-            <element signature="e#2159#2697#0#PHP" expanded="false" />
-            <element signature="e#2221#2683#0#PHP" expanded="false" />
-            <element signature="e#2414#2665#0#PHP" expanded="false" />
-            <element signature="e#2912#3042#0#PHP" expanded="false" />
-            <element signature="e#3127#3158#0#PHP" expanded="false" />
-            <element signature="e#3163#3573#0#PHP" expanded="true" />
-            <element signature="e#3250#3335#1#PHP" expanded="true" />
-            <element signature="e#3579#3611#0#PHP" expanded="false" />
-            <element signature="e#3616#3888#0#PHP" expanded="true" />
-            <element signature="e#3894#3973#0#PHP" expanded="false" />
-            <element signature="e#3978#4171#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="112" column="3" lean-forward="false" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
-          <folding>
-            <element signature="e#2909#2975#1#PHP" expanded="true" />
-            <element signature="e#3192#3235#2#PHP" expanded="true" />
+            <element signature="e#1624#2890#0#PHP" expanded="true" />
+            <element signature="e#2032#2120#0#PHP" expanded="false" />
+            <element signature="e#2206#2744#0#PHP" expanded="false" />
+            <element signature="e#2268#2730#0#PHP" expanded="false" />
+            <element signature="e#2461#2712#0#PHP" expanded="false" />
+            <element signature="e#2959#3089#0#PHP" expanded="false" />
+            <element signature="e#3174#3205#0#PHP" expanded="false" />
+            <element signature="e#3210#3620#0#PHP" expanded="true" />
+            <element signature="e#3297#3382#1#PHP" expanded="true" />
+            <element signature="e#3626#3658#0#PHP" expanded="false" />
+            <element signature="e#3663#3935#0#PHP" expanded="true" />
+            <element signature="e#3941#4020#0#PHP" expanded="false" />
+            <element signature="e#4025#4218#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
