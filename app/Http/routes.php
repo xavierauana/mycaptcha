@@ -30,5 +30,6 @@ use App\Http\Controllers\CaptchaController;
 //});
 
 $app->get('/', function () use ($app) {
+    dd('done');
     return view('welcome');
 });
