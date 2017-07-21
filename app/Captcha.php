@@ -44,11 +44,9 @@ class Captcha
     }
 
     public function createImage(array $inputs): Record {
-        array_key_exists("canvasBackgroundColor",
-            $inputs) ? $this->createImageCanvas($inputs["canvasBackgroundColor"]) : $this->createImageCanvas();
+        $this->createImageCanvas($inputs);
         $this->createCaptchaString($inputs);
-        array_key_exists("noiseColor",
-            $inputs) ? $this->createBackgroundNoise($inputs["noiseColor"]) : $this->createBackgroundNoise();
+        $this->createBackgroundNoise($inputs);
         $this->saveCaptchaImage();
         $record = $this->createDBRecord();
 
@@ -62,6 +60,7 @@ class Captcha
         $topMargin = ($this->height / 2) + ($fontSize / 2) - $posYConstant;
         $padding = 20;
         $wordSpacing = ($this->width - $padding * 2 + $posXConstant) / $this->number;
+
         for ($i = 0; $i < $this->number; $i++) {
 
             do {
@@ -69,6 +68,7 @@ class Captcha
             } while (in_array($char, $this->skip_chars));
 
             Log::info($char);
+            Log::info("there is skip chars, " . $this->skip_chars);
 
             $this->captchaString .= $char;
             $posX = ($i + 1) * $wordSpacing;
@@ -76,6 +76,7 @@ class Captcha
             if ($i > 0) {
                 $posX -= $posXConstant;
             }
+
             $this->captchaImage->text($char, $posX, $topMargin, function ($font) use ($char, $fontSize, $inputs) {
                 $numericFontColor = array_key_exists('numericFontColor',
                     $inputs) ? $inputs["numericFontColor"] : ImageSetting::NumericFontColor;
@@ -100,8 +101,9 @@ class Captcha
         $this->imagePath = str_replace(public_path(), "", $this->imagePath);
     }
 
-    private function createBackgroundNoise($color = null) {
-        $color = $color ?? ImageSetting::BackgroundNoiseDefaultColor;
+    private function createBackgroundNoise(array $inputs = []) {
+        $color = array_key_exists("noiseColor",
+            $inputs) ? $inputs["noiseColor"] : ImageSetting::BackgroundNoiseDefaultColor;
         $this->captchaImage->pixelate(1);
         for ($i = 0; $i < 10; $i++) {
             $x1 = rand(0, $this->width);
@@ -114,8 +116,9 @@ class Captcha
         }
     }
 
-    private function createImageCanvas($canvasBackgroundColor = null) {
-        $canvasBackgroundColor = $canvasBackgroundColor?? ImageSetting::CanvasBackgroundDefaultColor;
+    private function createImageCanvas(array $inputs = []) {
+        $canvasBackgroundColor = array_key_exists("canvasBackgroundColor",
+            $inputs) ? $inputs["canvasBackgroundColor"] : ImageSetting::CanvasBackgroundDefaultColor;
         $imageManager = new ImageManager();
         $this->captchaImage = $imageManager->canvas($this->width, $this->height, $canvasBackgroundColor);
     }
