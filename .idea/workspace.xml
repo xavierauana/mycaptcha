@@ -36,18 +36,18 @@
       <file leaf-file-name="Captcha.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Captcha.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="69" column="29" lean-forward="true" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+            <state relative-caret-position="532">
+              <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
               <folding>
-                <element signature="e#89#124#0#PHP" expanded="true" />
-                <element signature="e#675#894#0#PHP" expanded="true" />
-                <element signature="e#900#1196#0#PHP" expanded="true" />
-                <element signature="e#2109#2991#1#PHP" expanded="true" />
-                <element signature="e#3015#3301#0#PHP" expanded="true" />
-                <element signature="e#3307#3881#0#PHP" expanded="true" />
-                <element signature="e#3780#3863#1#PHP" expanded="true" />
-                <element signature="e#3887#4276#0#PHP" expanded="true" />
-                <element signature="e#4282#4548#0#PHP" expanded="true" />
+                <element signature="e#89#125#0#PHP" expanded="true" />
+                <element signature="e#648#867#0#PHP" expanded="true" />
+                <element signature="e#873#1169#0#PHP" expanded="true" />
+                <element signature="e#2081#2963#1#PHP" expanded="true" />
+                <element signature="e#2987#3273#0#PHP" expanded="true" />
+                <element signature="e#3279#3853#0#PHP" expanded="true" />
+                <element signature="e#3752#3835#1#PHP" expanded="true" />
+                <element signature="e#3859#4248#0#PHP" expanded="true" />
+                <element signature="e#4254#4520#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -360,12 +360,12 @@
       <workItem from="1484222865341" duration="377000" />
       <workItem from="1489476139192" duration="2444000" />
       <workItem from="1489524135059" duration="2318000" />
-      <workItem from="1500607009706" duration="3235000" />
+      <workItem from="1500607009706" duration="3529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44858000" />
+    <option name="totallyTimeSpent" value="45152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -437,8 +437,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/captcha/ubCOciPSrRvEPyth.gif" />
-    <entry file="file://$PROJECT_DIR$/public/captcha/b6OqX75RI8TgDUiI.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/C6UN2um3nYIXfs4a.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/pmtiiYXmG6xS1H9d.gif" />
     <entry file="file://$PROJECT_DIR$/public/captcha/GViDdJum4hcFbyTY.gif" />
@@ -735,20 +733,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/lumen-framework/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="646" column="0" lean-forward="true" selection-start-line="646" selection-start-column="0" selection-end-line="646" selection-end-column="0" />
+          <folding>
+            <element signature="e#15912#16793#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Captcha.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="69" column="29" lean-forward="true" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+        <state relative-caret-position="532">
+          <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
           <folding>
-            <element signature="e#89#124#0#PHP" expanded="true" />
-            <element signature="e#675#894#0#PHP" expanded="true" />
-            <element signature="e#900#1196#0#PHP" expanded="true" />
-            <element signature="e#2109#2991#1#PHP" expanded="true" />
-            <element signature="e#3015#3301#0#PHP" expanded="true" />
-            <element signature="e#3307#3881#0#PHP" expanded="true" />
-            <element signature="e#3780#3863#1#PHP" expanded="true" />
-            <element signature="e#3887#4276#0#PHP" expanded="true" />
-            <element signature="e#4282#4548#0#PHP" expanded="true" />
+            <element signature="e#89#125#0#PHP" expanded="true" />
+            <element signature="e#648#867#0#PHP" expanded="true" />
+            <element signature="e#873#1169#0#PHP" expanded="true" />
+            <element signature="e#2081#2963#1#PHP" expanded="true" />
+            <element signature="e#2987#3273#0#PHP" expanded="true" />
+            <element signature="e#3279#3853#0#PHP" expanded="true" />
+            <element signature="e#3752#3835#1#PHP" expanded="true" />
+            <element signature="e#3859#4248#0#PHP" expanded="true" />
+            <element signature="e#4254#4520#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,8 +8,8 @@
 namespace App;
 
 
-use Illuminate\Support\Facades\Log;
 use Intervention\Image\ImageManager;
+use Log;
 
 class Captcha
 {
@@ -68,7 +68,7 @@ class Captcha
             } while (in_array($char, $this->skip_chars));
 
             Log::info($char);
-            Log::info("there is skip chars, " . $this->skip_chars);
+            Log::info("there is skip chars, ", $this->skip_chars);
 
             $this->captchaString .= $char;
             $posX = ($i + 1) * $wordSpacing;
