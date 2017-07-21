@@ -13,6 +13,8 @@
 
 use App\Http\Controllers\CaptchaController;
 
+dd("done");
+
 $app->group(['prefix' => 'api'], function () use ($app) {
 
     $app->options('captcha', ['uses'=>CaptchaController::class."@getRequestHeaders"]);

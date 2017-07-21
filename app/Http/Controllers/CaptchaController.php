@@ -11,22 +11,20 @@ use Illuminate\Support\Facades\Cache;
 
 class CaptchaController extends Controller
 {
-    private $myCaptchaTokenHeader;
+    private $myCaptchaTokenHeader = "ana-myCaptcha-token";
 
-    private $headers;
+    private $headers = [
+        'Access-Control-Allow-Origin'      => '*',
+        'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE',
+        'Access-Control-Allow-Credentials' => 'true'
+    ];
 
     /**v
      * CaptchaController constructor.
      * @param array $headers
      */
     public function __construct() {
-        $this->myCaptchaTokenHeader = "ana-myCaptcha-token";
-        $this->headers = [
-            'Access-Control-Allow-Origin'      => '*',
-            'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE',
-            'Access-Control-Allow-Credentials' => 'true',
-            'Access-Control-Allow-Headers'     => 'X-Requested-With, Content-Type, X-Auth-Token, Origin, Authorization,' . $this->myCaptchaTokenHeader
-        ];
+        $this->headers['Access-Control-Allow-Headers'] = 'X-Requested-With, Content-Type, X-Auth-Token, Origin, Authorization,' . $this->myCaptchaTokenHeader;
     }
 
 
@@ -43,6 +41,8 @@ class CaptchaController extends Controller
     public function getCaptcha(Request $request) {
         $headers = [];
         $data = null;
+        dd('done');
+
         return response($data, 200, $headers);
         \Log::info('try to get Captcha');
         if ($this->isAValidRequest($request)) {
