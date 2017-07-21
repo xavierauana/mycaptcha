@@ -8,7 +8,6 @@ use App\Record;
 use App\Site;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Log;
 
 class CaptchaController extends Controller
 {
@@ -44,7 +43,7 @@ class CaptchaController extends Controller
     public function getCaptcha(Request $request) {
         $headers = [];
         $data = null;
-        Log::info('try to get Captcha');
+        \Log::info('try to get Captcha');
         if ($this->isAValidRequest($request)) {
             $data = $this->createCaptchaResponseData($request);
             $headers = $this->headers;
