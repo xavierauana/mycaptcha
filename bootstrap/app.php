@@ -9,9 +9,6 @@ try {
 }
 
 
-if (env('APP_DEBUG')) {
-    $app->register(Barryvdh\Debugbar\LumenServiceProvider::class);
-}
 
 
 /*
@@ -113,5 +110,11 @@ $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
 $app->configureMonologUsing(function($monolog) {
     return $monolog;
 });
+
+
+
+if (env('APP_DEBUG')) {
+    $app->register(Barryvdh\Debugbar\LumenServiceProvider::class);
+}
 
 return $app;
