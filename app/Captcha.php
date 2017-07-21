@@ -19,6 +19,9 @@ class Captcha
     private $captchaString = "";
     private $imagePath = "";
     private $font_file = "AlpacaScarlett.ttf";
+    private $skip_chars = [
+      'l','1',"O","0","9","g","q"
+    ];
 
     /**
      * Captcha constructor.
@@ -53,7 +56,9 @@ class Captcha
         $padding = 20;
         $wordSpacing = ($this->width - $padding * 2 + $posXConstant) / $this->number;
         for ($i = 0; $i < $this->number; $i++) {
-            $char = str_random(1);
+            do{
+                $char = str_random(1);
+            }while(in_array($char, $this->skip_chars));
             $this->captchaString .= $char;
             $posX = ($i + 1) * $wordSpacing;
 
