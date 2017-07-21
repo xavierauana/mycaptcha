@@ -44,6 +44,7 @@ class CaptchaController extends Controller
     public function getCaptcha(Request $request) {
         $headers = [];
         $data = null;
+        Log::info('try to get Captcha');
         if ($this->isAValidRequest($request)) {
             $data = $this->createCaptchaResponseData($request);
             $headers = $this->headers;
@@ -116,7 +117,6 @@ class CaptchaController extends Controller
      * @return array
      */
     private function createCaptchaResponseData(Request $request) {
-        Log::info("going to create captcha");
         $record = (new Captcha())->createImage($request->all());
         $data = [
             'imageUrl'  => $record->imageUrl,
