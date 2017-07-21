@@ -9,7 +9,8 @@
         "laravel/lumen-framework": "5.2.*",
         "vlucas/phpdotenv": "~2.2",
         "intervention/image": "^2.3",
-        "barryvdh/laravel-debugbar": "^2.4"
+        "barryvdh/laravel-debugbar": "^2.4",
+        "appzcoder/lumen-routes-list": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -111,6 +111,7 @@ $app->configureMonologUsing(function($monolog) {
     return $monolog;
 });
 
+$app->register(Appzcoder\LumenRoutesList\RoutesCommandServiceProvider::class);
 
 
 if (env('APP_DEBUG')) {
