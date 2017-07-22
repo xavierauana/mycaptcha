@@ -14,22 +14,18 @@
 use App\Http\Controllers\CaptchaController;
 
 
-//$app->group(['prefix' => 'api'], function () use ($app) {
-//
-//    $app->options('captcha', ['uses' => CaptchaController::class . "@getRequestHeaders"]);
-//
-//    //    $app->get('captcha', CaptchaController::class."@getCaptcha");
-//    $app->get('captcha', function () {
-//        dd("done");
-//    });
-//
-//    $app->post('captcha', CaptchaController::class . "@verifyCaptcha");
-//
-//    $app->post('captcha/verify', CaptchaController::class . "@verifyCaptchaToken");
-//
-//});
+$app->group(['prefix' => 'api'], function () use ($app) {
+
+    $app->options('captcha', ['uses' => CaptchaController::class . "@getRequestHeaders"]);
+
+    $app->get('captcha', CaptchaController::class . "@getCaptcha");
+
+    $app->post('captcha', CaptchaController::class . "@verifyCaptcha");
+
+    $app->post('captcha/verify', CaptchaController::class . "@verifyCaptchaToken");
+
+});
 
 $app->get('/', function () use ($app) {
-    dd('done');
     return view('welcome');
 });
