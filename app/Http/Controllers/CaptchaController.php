@@ -41,10 +41,7 @@ class CaptchaController extends Controller
     public function getCaptcha(Request $request) {
         $headers = [];
         $data = null;
-        dd('done');
 
-        return response($data, 200, $headers);
-        \Log::info('try to get Captcha');
         if ($this->isAValidRequest($request)) {
             $data = $this->createCaptchaResponseData($request);
             $headers = $this->headers;
