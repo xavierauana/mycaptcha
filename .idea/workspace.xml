@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edf5bf33-7860-4a2b-befc-d50dc6a0e2b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Captcha.php" afterPath="$PROJECT_DIR$/app/Captcha.php" />
     </list>
     <ignored path="myCaptcha.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,18 +51,18 @@
       <file leaf-file-name="Captcha.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Captcha.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+            <state relative-caret-position="644">
+              <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
               <folding>
                 <element signature="e#89#125#0#PHP" expanded="true" />
-                <element signature="e#674#893#0#PHP" expanded="true" />
-                <element signature="e#899#1195#0#PHP" expanded="true" />
-                <element signature="e#2115#2997#1#PHP" expanded="true" />
-                <element signature="e#3021#3307#0#PHP" expanded="true" />
-                <element signature="e#3313#3887#0#PHP" expanded="true" />
-                <element signature="e#3786#3869#1#PHP" expanded="true" />
-                <element signature="e#3893#4282#0#PHP" expanded="true" />
-                <element signature="e#4288#4554#0#PHP" expanded="true" />
+                <element signature="e#677#896#0#PHP" expanded="true" />
+                <element signature="e#902#1198#0#PHP" expanded="true" />
+                <element signature="e#2013#2895#1#PHP" expanded="true" />
+                <element signature="e#2919#3205#0#PHP" expanded="true" />
+                <element signature="e#3211#3785#0#PHP" expanded="true" />
+                <element signature="e#3684#3767#1#PHP" expanded="true" />
+                <element signature="e#3791#4180#0#PHP" expanded="true" />
+                <element signature="e#4186#4452#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,11 +143,11 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_05_30_070018_captchaRecord.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_05_31_094317_add_token_column_to_captcha_table.php" />
         <option value="$PROJECT_DIR$/app/ImageSetting.php" />
-        <option value="$PROJECT_DIR$/app/Captcha.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CaptchaController.php" />
+        <option value="$PROJECT_DIR$/app/Captcha.php" />
       </list>
     </option>
   </component>
@@ -270,6 +270,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myCaptcha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myCaptcha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,12 +488,12 @@
       <workItem from="1484222865341" duration="377000" />
       <workItem from="1489476139192" duration="2444000" />
       <workItem from="1489524135059" duration="2318000" />
-      <workItem from="1500607009706" duration="7680000" />
+      <workItem from="1500607009706" duration="7838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49303000" />
+    <option name="totallyTimeSpent" value="49461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -915,18 +933,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Captcha.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+        <state relative-caret-position="644">
+          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
           <folding>
             <element signature="e#89#125#0#PHP" expanded="true" />
-            <element signature="e#674#893#0#PHP" expanded="true" />
-            <element signature="e#899#1195#0#PHP" expanded="true" />
-            <element signature="e#2115#2997#1#PHP" expanded="true" />
-            <element signature="e#3021#3307#0#PHP" expanded="true" />
-            <element signature="e#3313#3887#0#PHP" expanded="true" />
-            <element signature="e#3786#3869#1#PHP" expanded="true" />
-            <element signature="e#3893#4282#0#PHP" expanded="true" />
-            <element signature="e#4288#4554#0#PHP" expanded="true" />
+            <element signature="e#677#896#0#PHP" expanded="true" />
+            <element signature="e#902#1198#0#PHP" expanded="true" />
+            <element signature="e#2013#2895#1#PHP" expanded="true" />
+            <element signature="e#2919#3205#0#PHP" expanded="true" />
+            <element signature="e#3211#3785#0#PHP" expanded="true" />
+            <element signature="e#3684#3767#1#PHP" expanded="true" />
+            <element signature="e#3791#4180#0#PHP" expanded="true" />
+            <element signature="e#4186#4452#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

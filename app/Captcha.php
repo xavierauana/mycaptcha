@@ -19,7 +19,7 @@ class Captcha
     private $captchaImage;
     private $captchaString = "";
     private $imagePath = "";
-    private $font_file = "AlpacaScarlett.ttf";
+    private $font_file = "AdventPro-Regular.ttf";
     private $skip_chars = [
         'l',
         "I",
@@ -67,8 +67,6 @@ class Captcha
 
             do {
                 $char = str_random(1);
-                Log::info($char);
-                Log::info("there is skip chars, ", $this->skip_chars);
             } while (in_array($char, $this->skip_chars));
 
 
